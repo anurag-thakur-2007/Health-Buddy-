@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="Health Buddy">Health Buddy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <div class="logo-text">
+          <h1 data-i18n="Health Buddy">Health Buddy</h1>
+          <p data-i18n="Empowering Health for Everyone">Empowering Health for Everyone</p>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-link active" data-section="chatSection" data-i18n="Chat">Chat</a></li>
+          <li><a href="#" class="nav-link" data-section="featuresSection" data-i18n="Features">Features</a></li>
+          <li><a href="#" class="nav-link" data-section="aboutSection" data-i18n="About">About</a></li>
+          <li><a href="#" class="nav-link" data-section="faqSection" data-i18n="FAQ">FAQ</a></li>
+          <li><a href="#" class="nav-link" data-section="contactSection" data-i18n="Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3 class="sidebar-title" data-i18n="Quick Access">Quick Access</h3>
+        <a href="#" class="sidebar-item active" data-section="chatSection">
+          <i class="fas fa-comments"></i>
+          <span data-i18n="Chat">Chat</span>
+        </a>
+        <a href="#" class="sidebar-item" data-section="destressSection">
+          <i class="fas fa-headset"></i>
+          <span data-i18n="De-Stress">De-Stress</span>
+        </a>
+        <a href="#" class="sidebar-item" data-section="symptomsSection">
+          <i class="fas fa-stethoscope"></i>
+          <span data-i18n="Symptom Check">Symptom Check</span>
+        </a>
+        <a href="#" class="sidebar-item" data-section="doctorsSection">
+          <i class="fas fa-user-md"></i>
+          <span data-i18n="Find Doctor">Find Doctor</span>
+        </a>
+        <a href="#" class="sidebar-item" data-section="emergencySection">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span data-i18n="SOS Emergency">SOS Emergency</span>
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <h3 class="sidebar-title" data-i18n="Accessibility">Accessibility</h3>
+        <div class="accessibility">
+          <label for="fontSize" data-i18n="Font Size">Font Size</label>
+          <select id="fontSize">
+            <option value="small" data-i18n="Small">Small</option>
+            <option value="medium" selected data-i18n="Medium">Medium</option>
+            <option value="large" data-i18n="Large">Large</option>
+          </select>
+          <label for="language" data-i18n="Language">Language</label>
+          <select id="language">
+            <option value="en" selected>English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+      </div>
+      <a href="#" class="sidebar-item whatsapp-btn" id="whatsappBtn">
+        <i class="fab fa-whatsapp"></i>
+        <span data-i18n="Chat on WhatsApp">Chat on WhatsApp</span>
+      </a>
+      <div class="sidebar-section">
+        <h3 class="sidebar-title" data-i18n="FAQ">FAQ</h3>
+        <a href="#" class="sidebar-item" data-section="faqSection">
+          <i class="fas fa-question-circle"></i>
+          <span data-i18n="FAQ">FAQ</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT SECTIONS -->
+    <section class="main-content">
+      <!-- Chat -->
+      <section id="chatSection" class="content-section">
+        <div class="chat-container">
+          <div class="chat-header">
+            <div>
+              <div class="chat-title" data-i18n="Chat with Health Buddy">Chat with Health Buddy</div>
+              <div class="online-status">
+                <span class="status-dot"></span>
+                <span data-i18n="Online">Online</span>
+              </div>
+            </div>
+            <button class="chat-history-btn" id="historyBtn" data-i18n="History">History</button>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+              <div class="message-avatar bot-avatar">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="message-content" data-i18n="InitialGreeting">
+                Hello! I'm Health Buddy, your friendly AI health assistant. How can I help you today? 😊
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-container">
+            <div class="chat-input-wrapper">
+              <label for="chatInput" class="visually-hidden">Chat Input</label>
+              <input type="text" id="chatInput" class="chat-input" placeholder="Type your message here..." data-i18n-placeholder="Type your message here...">
+              <div class="input-controls">
+                <button class="voice-btn" id="voiceBtn" aria-label="Voice input">
+                  <i class="fas fa-microphone"></i>
+                </button>
+                <button class="send-btn" id="sendBtn" aria-label="Send message">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Other sections (Features, De-stress, Symptoms, Doctors, Emergency, About, FAQ, Contact) are unchanged except their IDs must match the JS. Hide with style="display:none" initially. -->
+
+      <!-- Example: Features -->
+      <section id="featuresSection" class="content-section" style="display:none;">
+        <!-- …features content here… -->
+      </section>
+
+      <!-- Repeat for destressSection, symptomsSection, doctorsSection, emergencySection, aboutSection, faqSection, contactSection -->
+
+    </section>
+  </main>
+
+  <!-- HISTORY MODAL -->
+  <div class="history-modal" id="historyModal" role="dialog" aria-modal="true" aria-labelledby="history-title">
+    <div class="history-content">
+      <div class="history-header">
+        <h2 id="history-title" data-i18n="Chat History">Chat History</h2>
+        <button class="history-close" id="historyClose" aria-label="Close chat history">&times;</button>
+      </div>
+      <div class="history-list" id="historyList"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <div class="footer-icon">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <div>
+          <h4 data-i18n="Health Buddy">Health Buddy</h4>
+          <p data-i18n="CreatedForExhibition">Created for Your Exhibition Name</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#" data-i18n="Privacy">Privacy</a>
+        <a href="#" data-i18n="Terms of Service">Terms of Service</a>
+        <span id="datetime"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
