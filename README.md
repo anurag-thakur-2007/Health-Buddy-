@@ -1,5 +1,5 @@
 
-# 🩺 Arogya Sahayak – The HealthBot
+# 🩺 Health Buddy 
 
 ### *Bridging the Healthcare Gap in Rural India*
 
